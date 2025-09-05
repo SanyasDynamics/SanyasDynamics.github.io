@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Sanyas ECU Dynamics – ECU‑Reparaturen & Webshop</title>
-  <meta name="description" content="Sanyas ECU Dynamics – Reparatur und Service für KFZ‑Steuergeräte (ECU). Diagnostik, Klonen, Software, Versandservice. Jetzt beauftragen." />
+  <title>Sanyas ECU Dynamics – Steuergerät Reparaturen Webshop</title>
+  <meta name="description" content="Sanyas ECU Dynamics – Reparatur und Service für KFZ‑Steuergeräte. Diagnostik, Klonen, Software." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -80,11 +80,11 @@
       </div>
       <div class="card p-5">
         <h3 class="font-bold text-lg">ECU‑Klonen</h3>
-        <p class="text-gray-600 mt-2">Übernahme von EEPROM/Flash, IMMO‑Anpassung, Plug‑and‑Play Ersatzgerät.</p>
+        <p class="text-gray-600 mt-2">Übernahme von EEPROM/Flash, IMMO‑Anpassung, Plug‑and‑Play Auf Wunsch mit Ersatzsteuergerät.</p>
       </div>
       <div class="card p-5">
         <h3 class="font-bold text-lg">Software & Tuning‑Fixes</h3>
-        <p class="text-gray-600 mt-2">Boot‑Mode, Bench/OBD, Fehlerspeicher‑Fixes, Updates. Kein Straßenzulassungsversprechen.</p>
+        <p class="text-gray-600 mt-2">Tuninglösungen wie Softwareoptimierung, Öldruckoptimierung, Abschaltung von Teilsystemen, Updates.</p>
       </div>
     </div>
   </section>
@@ -105,7 +105,7 @@
     <div class="grid md:grid-cols-2 gap-6">
       <div class="card p-5">
         <h3 class="font-semibold">Wie läuft der Ablauf ab?</h3>
-        <p class="text-gray-600 mt-2">Du bestellst die gewünschte Dienstleistung. Wir senden dir ein Versandlabel oder Vorgaben. Nach Eingang prüfen wir die ECU, führen die Reparatur aus und versenden zurück. Nicht reparabel? Wir berechnen nur die Diagnose (siehe Artikel) und stimmen Alternativen ab.</p>
+        <p class="text-gray-600 mt-2">Du bestellst die gewünschte Dienstleistung und verschickst das jeweilige Gerät. Nach Eingang prüfen wir die ECU, führen die Reparatur aus und versenden zurück. Nicht reparabel? Wir berechnen nur die Diagnose und stimmen Alternativen ab.</p>
       </div>
       <div class="card p-5">
         <h3 class="font-semibold">Zahlung & Rechnung</h3>
@@ -155,7 +155,7 @@
     <div class="container mx-auto px-4 py-8 grid md:grid-cols-3 gap-6 text-sm">
       <div>
         <div class="font-bold">Sanyas ECU Dynamics</div>
-        <p class="text-gray-600 mt-2">Reparatur & Service für KFZ‑Steuergeräte. Versand deutschland‑ & EU‑weit.</p>
+        <p class="text-gray-600 mt-2">Reparatur & Service für KFZ‑Steuergeräte. Versand Europaweit.</p>
       </div>
       <div>
         <div class="font-semibold">Navigation</div>
@@ -228,23 +228,23 @@
         title: 'Diagnose / Kostenvoranschlag',
         desc: 'Prüfung & Bericht. Anrechenbar bei Reparatur.',
         price: 4900,
-        badge: '48h',
+        badge: 'Einfach bestellen und zusenden, Bearbeitungsdauer 48h',
         paylink: '' // optional: Stripe Payment Link URL hier einfügen
       },
       {
         id: 'ecu-repair',
-        title: 'ECU‑Reparatur (Standard)',
-        desc: 'Typische Defekte (Spannungsregler, Treiber, kalte Lötstellen).',
-        price: 18900,
-        badge: '12M Gewährleistung',
+        title: 'Steuergerät Refresh',
+        desc: 'Bevor ein defekt auftritt können wir ihr Steuergerät auffrischen',
+        price: 14900,
+        badge: 'mit gutem gewissen weiterfahren',
         paylink: ''
       },
       {
         id: 'ecu-clone',
-        title: 'ECU‑Klonen / IMMO‑Transfer',
-        desc: 'Übernahme EEPROM/Flash, Anpassung ans Fahrzeug.',
-        price: 14900,
-        badge: 'Plug‑and‑Play',
+        title: 'ECU‑Klonen / Wegfahrsperre kopieren',
+        desc: 'Übernahme der Daten vom defekten Steuergerät auf ein Ersatzsteuergerät.',
+        price: 13900,
+        badge: 'die Plug‑and‑Play Lösung!',
         paylink: ''
       },
       {
@@ -258,9 +258,9 @@
       {
         id: 'express',
         title: 'Expressbearbeitung',
-        desc: 'Priorisierte Bearbeitung innerhalb 24h ab Wareneingang.',
+        desc: 'Priorisierte Bearbeitung innerhalb 12h ab Wareneingang.',
         price: 3900,
-        badge: 'Optional',
+        badge: 'Optional auf Wunsch',
         paylink: ''
       }
     ];
@@ -351,7 +351,7 @@
       // Platzhalter: wenn ein Item einen paylink hat, öffnen wir den ersten Link.
       const link = CART.find(i=>i.paylink)?.paylink;
       if(link){ window.open(link, '_blank'); }
-      else { alert('Kein Zahlungslink hinterlegt. Nutze "Anfrage senden" oder hinterlege Stripe/PayPal‑Links in der PRODUCTS‑Konfiguration.'); }
+      else { alert('Dieser Shop ist noch nicht per direkt zahlen Funktion aktiv. Nutze "Anfrage senden" oder schicke uns eine Whatsapp Nachricht'); }
     }
 
     function sendContact(e){
