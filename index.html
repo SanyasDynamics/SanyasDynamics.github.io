@@ -9,7 +9,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
-  <style>body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}</style>
+  <style>
+    html{scroll-behavior:smooth}
+    body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+  </style>
 </head>
 <body class="bg-gray-50 text-gray-900">
   <!-- Header -->
@@ -41,98 +44,195 @@
     </div>
   </header>
 
-  <!-- Hero -->
-  <section id="top" class="relative isolate">
-    <div class="absolute inset-0 -z-10 bg-gradient-to-br from-emerald-600 via-emerald-500 to-cyan-500"></div>
-    <div class="max-w-6xl mx-auto px-4 py-14 md:py-20 text-white">
-      <div class="grid md:grid-cols-2 gap-10 items-center">
+  <main>
+    <!-- Hero -->
+    <section id="top" class="relative isolate">
+      <div class="absolute inset-0 -z-10 bg-gradient-to-br from-emerald-600 via-emerald-500 to-cyan-500"></div>
+      <div class="max-w-6xl mx-auto px-4 py-14 md:py-20 text-white">
+        <div class="grid md:grid-cols-2 gap-10 items-center">
+          <div>
+            <h1 class="text-4xl md:text-6xl font-extrabold leading-tight">Reparatur von Kfz‑Steuergeräten<br><span class="text-white/90">schnell & fachgerecht</span></h1>
+            <p class="mt-4 text-white/90 md:text-lg">Diagnose, Instandsetzung, Klonen und Software. Transparente Preise, EU‑weiter Versand.</p>
+            <div class="mt-6 flex flex-wrap gap-3">
+              <a href="#shop" class="inline-flex items-center justify-center px-5 py-3 rounded-2xl font-semibold bg-white text-emerald-700 hover:bg-emerald-50 shadow">Jetzt beauftragen</a>
+              <a href="#leistungen" class="inline-flex items-center justify-center px-5 py-3 rounded-2xl font-semibold ring-1 ring-white/60 text-white hover:bg-white/10">Leistungen ansehen</a>
+            </div>
+            <div class="mt-6 flex items-center gap-4 text-sm text-white/80">
+              <span class="inline-flex items-center gap-2"><span class="h-2 w-2 bg-white rounded-full"></span> 24–72 h Bearbeitungszeit</span>
+              <span class="inline-flex items-center gap-2"><span class="h-2 w-2 bg-white rounded-full"></span> 12 Monate Gewährleistung</span>
+              <span class="inline-flex items-center gap-2"><span class="h-2 w-2 bg-white rounded-full"></span> EU‑weiter Versand</span>
+            </div>
+          </div>
+          <div class="bg-white/10 backdrop-blur rounded-3xl p-3 ring-1 ring-white/20 shadow-xl">
+            <img class="rounded-2xl" alt="ECU‑Reparatur" src="leiterplattennahaufnahme-mit-verschiedenen-anschlussen.jpg" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Leistungen -->
+    <section id="leistungen" class="max-w-6xl mx-auto px-4 py-14 scroll-mt-24">
+      <h2 class="text-2xl md:text-3xl font-extrabold mb-6">Leistungen</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <article class="bg-white rounded-2xl shadow-sm ring-1 ring-gray-100 p-6 hover:shadow-lg hover:-translate-y-0.5 transition">
+          <h3 class="font-bold text-lg">ECU‑Reparatur</h3>
+          <p class="text-gray-600 mt-2">Fehlerdiagnose, Bauteiltausch (z. B. Treiber, Spannungsregler) und Lötarbeiten unter dem Mikroskop.</p>
+        </article>
+        <article class="bg-white rounded-2xl shadow-sm ring-1 ring-gray-100 p-6 hover:shadow-lg hover:-translate-y-0.5 transition">
+          <h3 class="font-bold text-lg">ECU‑Klonen</h3>
+          <p class="text-gray-600 mt-2">Übernahme von EEPROM/Flash, IMMO‑Anpassung, auf Wunsch Plug‑and‑Play‑Ersatzgerät.</p>
+        </article>
+        <article class="bg-white rounded-2xl shadow-sm ring-1 ring-gray-100 p-6 hover:shadow-lg hover:-translate-y-0.5 transition">
+          <h3 class="font-bold text-lg">Software & Tuning‑Fixes</h3>
+          <p class="text-gray-600 mt-2">Boot‑Mode, Bench/OBD, Korrekturen im Fehlerspeicher, Updates. Kein Versprechen zur Straßenzulassung.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Shop -->
+    <section id="shop" class="bg-white scroll-mt-24">
+      <div class="max-w-6xl mx-auto px-4 py-14">
+        <div class="flex items-end justify-between mb-6">
+          <h2 class="text-2xl md:text-3xl font-extrabold">Webshop – Dienstleistungen</h2>
+          <div class="text-sm text-gray-500">Preise inkl. MwSt. (zzgl. Versand des Steuergeräts)</div>
+        </div>
+
+        <!-- Static fallback (JS überschreibt; Buttons sind dennoch klickbar) -->
+        <div id="productGrid" class="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
+          <article class="bg-white rounded-2xl shadow-sm ring-1 ring-gray-100 p-6">
+            <div class="flex items-center justify-between">
+              <h3 class="font-bold text-lg">Diagnose / Kostenvoranschlag</h3>
+              <span class="text-xs px-2 py-1 rounded-md bg-emerald-50 text-emerald-700 font-medium">48 h</span>
+            </div>
+            <p class="text-gray-600 mt-2">Prüfung & Bericht. Anrechenbar bei Reparatur.</p>
+            <div class="mt-4 flex items-center justify-between">
+              <div class="font-extrabold text-xl">49,00 €</div>
+              <button onclick="addToCart('diag-basic')" class="px-4 py-2 rounded-xl font-semibold bg-emerald-600 text-white">Hinzufügen</button>
+            </div>
+          </article>
+          <article class="bg-white rounded-2xl shadow-sm ring-1 ring-gray-100 p-6">
+            <div class="flex items-center justify-between">
+              <h3 class="font-bold text-lg">Steuergerät‑Refresh</h3>
+              <span class="text-xs px-2 py-1 rounded-md bg-emerald-50 text-emerald-700 font-medium">48 h</span>
+            </div>
+            <p class="text-gray-600 mt-2">Vorbeugende Auffrischung vor Ausfall.</p>
+            <div class="mt-4 flex items-center justify-between">
+              <div class="font-extrabold text-xl">149,00 €</div>
+              <button onclick="addToCart('ecu-repair')" class="px-4 py-2 rounded-xl font-semibold bg-emerald-600 text-white">Hinzufügen</button>
+            </div>
+          </article>
+          <article class="bg-white rounded-2xl shadow-sm ring-1 ring-gray-100 p-6">
+            <div class="flex items-center justify-between">
+              <h3 class="font-bold text-lg">ECU‑Klonen / Wegfahrsperre</h3>
+              <span class="text-xs px-2 py-1 rounded-md bg-emerald-50 text-emerald-700 font-medium">Plug‑and‑Play</span>
+            </div>
+            <p class="text-gray-600 mt-2">Datenübernahme auf eine Ersatz‑ECU (Plug‑and‑Play).</p>
+            <div class="mt-4 flex items-center justify-between">
+              <div class="font-extrabold text-xl">139,00 €</div>
+              <button onclick="addToCart('ecu-clone')" class="px-4 py-2 rounded-xl font-semibold bg-emerald-600 text-white">Hinzufügen</button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="max-w-6xl mx-auto px-4 py-14 scroll-mt-24">
+      <h2 class="text-2xl md:text-3xl font-extrabold mb-6">FAQ</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <article class="bg-white rounded-2xl shadow-sm ring-1 ring-gray-100 p-6">
+          <h3 class="font-semibold">Wie läuft der Ablauf ab?</h3>
+          <p class="text-gray-600 mt-2">Sie bestellen die gewünschte Dienstleistung. Nach Eingang prüfen wir die ECU, führen die Arbeiten aus und versenden zurück. Nicht reparabel? Es fällt nur die Diagnose an; Alternativen stimmen wir ab.</p>
+        </article>
+        <article class="bg-white rounded-2xl shadow-sm ring-1 ring-gray-100 p-6">
+          <h3 class="font-semibold">Zahlung & Rechnung</h3>
+          <p class="text-gray-600 mt-2">Vorkasse, PayPal oder Kartenzahlung via Stripe‑Zahlungslink. Sie erhalten eine Rechnung mit ausgewiesener MwSt.</p>
+        </article>
+        <article class="bg-white rounded-2xl shadow-sm ring-1 ring-gray-100 p-6">
+          <h3 class="font-semibold">Bearbeitungszeit</h3>
+          <p class="text-gray-600 mt-2">In der Regel 24–72 Stunden ab Wareneingang. Bei Bauteilbestellung informieren wir Sie.</p>
+        </article>
+        <article class="bg-white rounded-2xl shadow-sm ring-1 ring-gray-100 p-6">
+          <h3 class="font-semibold">Gewährleistung</h3>
+          <p class="text-gray-600 mt-2">12 Monate Gewährleistung auf die durchgeführten Arbeiten. Folgeschäden durch Fahrzeugperipherie oder Fremdeingriffe sind ausgeschlossen.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Kontakt -->
+    <section id="kontakt" class="max-w-6xl mx-auto px-4 py-14 scroll-mt-24">
+      <div class="grid md:grid-cols-2 gap-8 items-start">
         <div>
-          <h1 class="text-4xl md:text-6xl font-extrabold leading-tight">Reparatur von Kfz‑Steuergeräten<br><span class="text-white/90">schnell & fachgerecht</span></h1>
-          <p class="mt-4 text-white/90 md:text-lg">Diagnose, Instandsetzung, Klonen und Software. Transparente Preise, europaweiter Versand.</p>
-          <div class="mt-6 flex flex-wrap gap-3">
-            <a href="#shop" class="inline-flex items-center justify-center px-5 py-3 rounded-2xl font-semibold bg-white text-emerald-700 hover:bg-emerald-50 shadow">Jetzt beauftragen</a>
-            <a href="#leistungen" class="inline-flex items-center justify-center px-5 py-3 rounded-2xl font-semibold ring-1 ring-white/60 text-white hover:bg-white/10">Leistungen ansehen</a>
-          </div>
-          <div class="mt-6 flex items-center gap-4 text-sm text-white/80">
-            <span class="inline-flex items-center gap-2"><span class="h-2 w-2 bg-white rounded-full"></span> 24–72 h Bearbeitungszeit</span>
-            <span class="inline-flex items-center gap-2"><span class="h-2 w-2 bg-white rounded-full"></span> 12 Monate Gewährleistung</span>
-            <span class="inline-flex items-center gap-2"><span class="h-2 w-2 bg-white rounded-full"></span> EU‑weiter Versand</span>
-          </div>
+          <h2 class="text-2xl md:text-3xl font-extrabold">Kontakt & Anfrage</h2>
+          <p class="text-gray-600 mt-2">Fragen zum Defekt oder zur Abwicklung? Schreiben Sie uns. Für Bestellungen nutzen Sie den Warenkorb → „Anfrage senden“.</p>
+          <form id="contactForm" class="mt-6 space-y-3" onsubmit="sendContact(event)">
+            <input class="w-full rounded-xl border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-emerald-600" required name="name" placeholder="Name" />
+            <input class="w-full rounded-xl border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-emerald-600" required name="email" type="email" placeholder="E‑Mail" />
+            <input class="w-full rounded-xl border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-emerald-600" name="telefon" placeholder="Telefon (optional)" />
+            <textarea class="w-full rounded-xl border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-emerald-600" name="nachricht" rows="4" placeholder="Nachricht"></textarea>
+            <button class="inline-flex items-center justify-center px-4 py-3 rounded-xl font-semibold shadow bg-emerald-600 text-white hover:bg-emerald-700 w-full" type="submit">Nachricht senden</button>
+          </form>
+          <p class="text-xs text-gray-500 mt-2">Es wird Ihr Standard‑Mailprogramm mit einer vorbefüllten E‑Mail geöffnet (kein Server nötig).</p>
         </div>
-        <div class="bg-white/10 backdrop-blur rounded-3xl p-3 ring-1 ring-white/20 shadow-xl">
-          <img class="rounded-2xl" alt="ECU Reparatur" src="leiterplattennahaufnahme-mit-verschiedenen-anschlussen.jpg" />
+        <div class="bg-white rounded-2xl shadow-sm ring-1 ring-gray-100 p-6">
+          <h3 class="font-semibold mb-2">Adresse</h3>
+          <p>Sanyas ECU Dynamics<br>— genaue Anschrift hier eintragen —</p>
+          <h3 class="font-semibold mt-6 mb-2">E‑Mail</h3>
+          <p><a class="text-emerald-700 hover:underline" href="mailto:info@sanyas.net">info@sanyas.net</a></p>
+          <h3 class="font-semibold mt-6 mb-2">WhatsApp</h3>
+          <p><a class="text-emerald-700 hover:underline" href="https://wa.me/xxxxxxxxx">xxxxxxxxx</a></p>
+          <h3 class="font-semibold mt-6 mb-2">USt‑IdNr.</h3>
+          <p>— hier eintragen —</p>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
-  <!-- Leistungen -->
-  <section id="leistungen" class="max-w-6xl mx-auto px-4 py-14">
-    <h2 class="text-2xl md:text-3xl font-extrabold mb-6">Leistungen</h2>
-    <div class="grid md:grid-cols-3 gap-6">
-      <article class="bg-white rounded-2xl shadow-sm ring-1 ring-gray-100 p-6 hover:shadow-lg hover:-translate-y-0.5 transition">
-        <h3 class="font-bold text-lg">ECU‑Reparatur</h3>
-        <p class="text-gray-600 mt-2">Fehlerdiagnose ihres Steuergerätes.</p>
-      </article>
-      <article class="bg-white rounded-2xl shadow-sm ring-1 ring-gray-100 p-6 hover:shadow-lg hover:-translate-y-0.5 transition">
-        <h3 class="font-bold text-lg">ECU‑Klonen</h3>
-        <p class="text-gray-600 mt-2">Übernahme von EEPROM/Flash, IMMO‑Anpassung, Plug‑and‑Play‑Ersatzgerät.</p>
-      </article>
-      <article class="bg-white rounded-2xl shadow-sm ring-1 ring-gray-100 p-6 hover:shadow-lg hover:-translate-y-0.5 transition">
-        <h3 class="font-bold text-lg">Software & Tuning‑Fixes</h3>
-        <p class="text-gray-600 mt-2">Softwareoptimierungen, Korrekturen im Fehlerspeicher, Updates.</p>
-      </article>
-    </div>
-  </section>
-
-  <!-- Shop -->
-  <section id="shop" class="bg-white">
-    <div class="max-w-6xl mx-auto px-4 py-14">
-      <div class="flex items-end justify-between mb-6">
-        <h2 class="text-2xl md:text-3xl font-extrabold">Webshop – Dienstleistungen</h2>
-        <div class="text-sm text-gray-500">Preise inkl. MwSt. (zzgl. Versand des Steuergeräts)</div>
+  <!-- Footer -->
+  <footer class="border-t border-gray-200 bg-white">
+    <div class="max-w-6xl mx-auto px-4 py-10 grid md:grid-cols-3 gap-6 text-sm">
+      <div>
+        <div class="font-bold">Sanyas ECU Dynamics</div>
+        <p class="text-gray-600 mt-2">Reparatur & Service für Kfz‑Steuergeräte. Versand EU‑weit.</p>
       </div>
-
-      <!-- Static fallback (wird von JS überschrieben, zeigt aber Produkte auch ohne JS) -->
-      <div id="productGrid" class="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
-        <article class="bg-white rounded-2xl shadow-sm ring-1 ring-gray-100 p-6">
-          <div class="flex items-center justify-between">
-            <h3 class="font-bold text-lg">Diagnose / Kostenvoranschlag</h3>
-            <span class="text-xs px-2 py-1 rounded-md bg-emerald-50 text-emerald-700 font-medium">48 h</span>
-          </div>
-          <p class="text-gray-600 mt-2">Prüfung & Bericht. Anrechenbar bei Reparatur.</p>
-          <div class="mt-4 flex items-center justify-between">
-            <div class="font-extrabold text-xl">49,00 €</div>
-            <button class="px-4 py-2 rounded-xl font-semibold bg-emerald-600 text-white">Hinzufügen</button>
-          </div>
-        </article>
-        <article class="bg-white rounded-2xl shadow-sm ring-1 ring-gray-100 p-6">
-          <div class="flex items-center justify-between">
-            <h3 class="font-bold text-lg">Steuergerät‑Refresh</h3>
-            <span class="text-xs px-2 py-1 rounded-md bg-emerald-50 text-emerald-700 font-medium">48 h</span>
-          </div>
-          <p class="text-gray-600 mt-2">Vorbeugende Auffrischung vor Ausfall.</p>
-          <div class="mt-4 flex items-center justify-between">
-            <div class="font-extrabold text-xl">149,00 €</div>
-            <button class="px-4 py-2 rounded-xl font-semibold bg-emerald-600 text-white">Hinzufügen</button>
-          </div>
-        </article>
-        <article class="bg-white rounded-2xl shadow-sm ring-1 ring-gray-100 p-6">
-          <div class="flex items-center justify-between">
-            <h3 class="font-bold text-lg">ECU‑Klonen / Wegfahrsperre</h3>
-            <span class="text-xs px-2 py-1 rounded-md bg-emerald-50 text-emerald-700 font-medium">Plug‑and‑Play</span>
-          </div>
-          <p class="text-gray-600 mt-2">Datenübernahme auf Ersatz‑ECU (Plug‑and‑Play).</p>
-          <div class="mt-4 flex items-center justify-between">
-            <div class="font-extrabold text-xl">139,00 €</div>
-            <button class="px-4 py-2 rounded-xl font-semibold bg-emerald-600 text-white">Hinzufügen</button>
-          </div>
-        </article>
+      <div>
+        <div class="font-semibold">Navigation</div>
+        <ul class="mt-2 space-y-1">
+          <li><a class="text-emerald-700 hover:underline" href="#leistungen">Leistungen</a></li>
+          <li><a class="text-emerald-700 hover:underline" href="#shop">Shop</a></li>
+          <li><a class="text-emerald-700 hover:underline" href="#faq">FAQ</a></li>
+          <li><a class="text-emerald-700 hover:underline" href="#kontakt">Kontakt</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="font-semibold">Rechtliches</div>
+        <ul class="mt-2 space-y-1">
+          <li><a class="text-emerald-700 hover:underline" href="#impressum">Impressum</a></li>
+          <li><a class="text-emerald-700 hover:underline" href="#datenschutz">Datenschutz</a></li>
+          <li><span class="text-gray-400">AGB (optional)</span></li>
+        </ul>
       </div>
     </div>
+    <div class="text-center text-xs text-gray-500 pb-8">© <span id="year"></span> Sanyas ECU Dynamics</div>
+  </footer>
+
+  <!-- Rechtliches -->
+  <section id="impressum" class="max-w-6xl mx-auto px-4 py-14 scroll-mt-24">
+    <h2 class="text-2xl font-extrabold mb-4">Impressum</h2>
+    <div class="prose max-w-none">
+      <p><strong>Verantwortlich:</strong><br> Sanyas ECU Dynamics<br> — vollständige Anschrift hier —</p>
+      <p><strong>Kontakt:</strong> <a class="text-emerald-700 hover:underline" href="mailto:info@sanyas.net">info@sanyas.net</a></p>
+      <p><strong>USt‑IdNr.:</strong> — eintragen —</p>
+    </div>
   </section>
 
-  <!-- FAQ, Kontakt, Footer wie gehabt (gekürzt in dieser Erklärung) -->
+  <section id="datenschutz" class="max-w-6xl mx-auto px-4 pb-20 scroll-mt-24">
+    <h2 class="text-2xl font-extrabold mb-4">Datenschutzerklärung (Kurzfassung)</h2>
+    <div class="prose max-w-none">
+      <p>Wir verarbeiten personenbezogene Daten (Name, Kontakt, Fahrzeugdaten) ausschließlich zur Abwicklung Ihrer Anfrage/Aufträge. Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO. Keine Weitergabe an Dritte außer Zahlungs‑/Versanddienstleister. Auskunfts‑, Berichtigungs‑, Löschrechte nach DSGVO bestehen. Kontakt: <a class="text-emerald-700 hover:underline" href="mailto:privacy@sanyas.net">privacy@sanyas.net</a>.</p>
+      <p>Hinweis: Diese Kurzfassung ersetzt keine vollumfängliche Datenschutzerklärung. Nutzen Sie einen Generator (z. B. eRecht24) und ersetzen Sie diesen Abschnitt.</p>
+    </div>
+  </section>
 
   <!-- Cart Drawer -->
   <div id="cartDrawer" class="fixed inset-0 hidden">
@@ -148,16 +248,17 @@
           <span>Zwischensumme</span>
           <span id="cartSubtotal">0,00 €</span>
         </div>
+        <p class="text-xs text-gray-500 mt-1">Hinweis: Bei Direktzahlung pro Position zahlen Sie jede Dienstleistung separat.</p>
         <div class="mt-4 grid grid-cols-2 gap-3">
           <button class="px-4 py-2 rounded-xl font-semibold border border-emerald-700 text-emerald-700 hover:bg-emerald-50" onclick="sendInquiry()">Anfrage senden (E‑Mail)</button>
-          <button class="px-4 py-2 rounded-xl font-semibold bg-emerald-600 text-white hover:bg-emerald-700" onclick="payNow()">Bezahlen (Stripe/PayPal)</button>
+          <button class="px-4 py-2 rounded-xl font-semibold bg-emerald-600 text-white hover:bg-emerald-700" onclick="payNow()">Bezahlen</button>
         </div>
       </div>
     </aside>
   </div>
 
   <script>
-  // Polyfills (für sehr alte Browser)
+  // ===== Polyfills (alte Browser) =====
   if (!Array.prototype.find) {
     Array.prototype.find = function(predicate) {
       if (this == null) throw new TypeError('Array.prototype.find called on null or undefined');
@@ -171,141 +272,147 @@
     Array.prototype.map = function(callback, thisArg) {
       var T, A, k;
       if (this == null) throw new TypeError(' this is null or not defined');
-      var O = Object(this);
-      var len = O.length >>> 0;
+      var O = Object(this), len = O.length >>> 0;
       if (typeof callback !== 'function') throw new TypeError(callback + ' is not a function');
       if (arguments.length > 1) T = thisArg;
-      A = new Array(len);
-      k = 0;
+      A = new Array(len); k = 0;
       while (k < len) {
         var kValue, mappedValue;
-        if (k in O) {
-          kValue = O[k];
-          mappedValue = callback.call(T, kValue, k, O);
-          A[k] = mappedValue;
-        }
+        if (k in O) { kValue = O[k]; mappedValue = callback.call(T, kValue, k, O); A[k] = mappedValue; }
         k++;
       }
       return A;
     };
   }
 
-  document.addEventListener('DOMContentLoaded', function(){
-    var PRODUCTS = [
-      { id:'diag-basic', title:'Diagnose / Kostenvoranschlag', desc:'Prüfung & Bericht. Anrechenbar bei Reparatur.', price:4900,  badge:'48 h', paylink:'' },
-      { id:'ecu-repair', title:'Steuergerät‑Refresh',          desc:'Vorbeugende Auffrischung vor Ausfall.',         price:14900, badge:'48 h', paylink:'' },
-      { id:'ecu-clone',  title:'ECU‑Klonen / Wegfahrsperre',   desc:'Datenübernahme auf Ersatz‑ECU (Plug‑and‑Play).', price:13900, badge:'Plug‑and‑Play', paylink:'' },
-      { id:'coding',     title:'Codierungen & Infotainment',   desc:'CarPlay/Android Auto, Updates, Region ändern.',  price:19000, badge:'Add‑on', paylink:'' },
-      { id:'tiefer',     title:'Software‑Tieferlegung',        desc:'Wunschtiefe innerhalb der Fahrzeugtoleranzen.',  price:20000, badge:'Software', paylink:'' },
-      { id:'express',    title:'Expressbearbeitung',           desc:'Priorisiert innerhalb von 12 h ab Wareneingang.', price:3900,  badge:'Optional', paylink:'' }
-    ];
+  // ===== Shop-Daten =====
+  var PRODUCTS = [
+    { id:'diag-basic', title:'Diagnose / Kostenvoranschlag', desc:'Prüfung & Bericht. Anrechenbar bei Reparatur.',  price:4900,  badge:'48 h',         paylink:'' },
+    { id:'ecu-repair', title:'Steuergerät‑Refresh',           desc:'Vorbeugende Auffrischung vor Ausfall.',          price:14900, badge:'48 h',         paylink:'' },
+    { id:'ecu-clone',  title:'ECU‑Klonen / Wegfahrsperre',    desc:'Datenübernahme auf Ersatz‑ECU (Plug‑and‑Play).',  price:13900, badge:'Plug‑and‑Play', paylink:'' },
+    { id:'coding',     title:'Codierungen & Infotainment',    desc:'CarPlay/Android Auto, Updates, Region ändern.',   price:19000, badge:'Add‑on',       paylink:'' },
+    { id:'tiefer',     title:'Software‑Tieferlegung',         desc:'Wunschtiefe innerhalb der Fahrzeugtoleranzen.',   price:20000, badge:'Software',     paylink:'' },
+    { id:'express',    title:'Expressbearbeitung',            desc:'Priorisiert innerhalb von 12 h ab Wareneingang.', price:3900,  badge:'Optional',     paylink:'' }
+  ];
 
-    function safeStorage(){
-      try{ var test='__t__'; localStorage.setItem(test,'1'); localStorage.removeItem(test); return localStorage; }
-      catch(e){ return {getItem:function(){return '[]'}, setItem:function(){}, removeItem:function(){}}; }
-    }
-    var storage = safeStorage();
-    function fmt(cents){ return (cents/100).toLocaleString('de-DE',{style:'currency',currency:'EUR'}); }
+  // ===== Helpers & State =====
+  function fmt(cents){ return (cents/100).toLocaleString('de-DE',{style:'currency',currency:'EUR'}); }
+  function safeStorage(){
+    try{ var t='__t__'; localStorage.setItem(t,'1'); localStorage.removeItem(t); return localStorage; }
+    catch(e){ return {getItem:function(){return '[]'}, setItem:function(){}, removeItem:function(){}}; }
+  }
+  var storage = safeStorage();
 
-    var productGrid = document.getElementById('productGrid');
-    var cartCount = document.getElementById('cartCount');
-    var cartCountMobile = document.getElementById('cartCountMobile');
-    var cartDrawer = document.getElementById('cartDrawer');
-    var cartItemsEl = document.getElementById('cartItems');
-    var cartSubtotalEl = document.getElementById('cartSubtotal');
+  var productGrid = document.getElementById('productGrid');
+  var cartCount = document.getElementById('cartCount');
+  var cartCountMobile = document.getElementById('cartCountMobile');
+  var cartDrawer = document.getElementById('cartDrawer');
+  var cartItemsEl = document.getElementById('cartItems');
+  var cartSubtotalEl = document.getElementById('cartSubtotal');
 
-    var CART = JSON.parse(storage.getItem('sanyas_cart')||'[]');
+  var CART = JSON.parse(storage.getItem('sanyas_cart')||'[]');
 
-    function renderProducts(){
-      if(!productGrid) return;
-      var html = PRODUCTS.map(function(p){
-        return '<article class="bg-white rounded-2xl shadow-sm ring-1 ring-gray-100 p-6 flex flex-col hover:shadow-lg hover:-translate-y-0.5 transition">\
-          <div class="flex items-center justify-between">\
-            <h3 class="font-bold text-lg">'+p.title+'</h3>\
-            <span class="text-xs px-2 py-1 rounded-md bg-emerald-50 text-emerald-700 font-medium">'+(p.badge||'')+'</span>\
-          </div>\
-          <p class="text-gray-600 mt-2 flex-1">'+p.desc+'</p>\
-          <div class="mt-4 flex items-center justify-between">\
-            <div class="font-extrabold text-xl">'+fmt(p.price)+'</div>\
+  // ===== Render =====
+  function renderProducts(){
+    if(!productGrid) return;
+    var html = PRODUCTS.map(function(p){
+      return '<article class="bg-white rounded-2xl shadow-sm ring-1 ring-gray-100 p-6 flex flex-col hover:shadow-lg hover:-translate-y-0.5 transition">\
+        <div class="flex items-center justify-between">\
+          <h3 class="font-bold text-lg">'+p.title+'</h3>\
+          <span class="text-xs px-2 py-1 rounded-md bg-emerald-50 text-emerald-700 font-medium">'+(p.badge||'')+'</span>\
+        </div>\
+        <p class="text-gray-600 mt-2 flex-1">'+p.desc+'</p>\
+        <div class="mt-4 flex items-center justify-between gap-2">\
+          <div class="font-extrabold text-xl">'+fmt(p.price)+'</div>\
+          <div class="flex items-center gap-2">\
             <button class="px-4 py-2 rounded-xl font-semibold bg-emerald-600 text-white hover:bg-emerald-700 shadow" onclick="addToCart(\''+p.id+'\')">Hinzufügen</button>\
+            '+(p.paylink && p.paylink.indexOf('http')===0 ? '<a class="px-3 py-2 rounded-xl font-semibold border border-emerald-700 text-emerald-700 hover:bg-emerald-50" href="'+p.paylink+'" target="_blank" rel="noopener">Direkt zahlen</a>' : '')+'\
           </div>\
-        </article>';
-      }).join('');
-      productGrid.innerHTML = html;
+        </div>\
+      </article>';
+    }).join('');
+    productGrid.innerHTML = html;
+  }
+
+  // ===== Cart ops (global for inline handlers) =====
+  function persistCart(){ storage.setItem('sanyas_cart', JSON.stringify(CART)); updateCartUI(); }
+
+  function addToCart(id){
+    var p = PRODUCTS.find(function(x){return x.id===id;});
+    var ex = CART.find(function(x){return x.id===id;});
+    if(ex){ ex.qty += 1; } else { CART.push({ id:p.id, title:p.title, price:p.price, qty:1, paylink:p.paylink }); }
+    persistCart();
+  }
+  function removeFromCart(id){ CART = CART.filter(function(x){return x.id!==id;}); persistCart(); }
+  function changeQty(id, delta){
+    var item = CART.find(function(x){return x.id===id;}); if(!item) return;
+    item.qty += delta; if(item.qty<=0) removeFromCart(id); else persistCart();
+  }
+
+  function updateCartUI(){
+    var count = CART.reduce(function(a,b){return a+b.qty;},0);
+    if(cartCount) cartCount.textContent = count;
+    if(cartCountMobile) cartCountMobile.textContent = count;
+    if(cartItemsEl){
+      cartItemsEl.innerHTML = CART.length ? CART.map(function(i){
+        return '<div class="flex items-start justify-between border rounded-xl p-3">\
+          <div>\
+            <div class="font-semibold">'+i.title+'</div>\
+            <div class="text-sm text-gray-500">'+fmt(i.price)+' × '+i.qty+'</div>\
+          </div>\
+          <div class="flex items-center gap-2">\
+            '+(i.paylink && i.paylink.indexOf('http')===0 ? '<a class="px-2 py-1 text-sm rounded-lg border border-emerald-700 text-emerald-700 hover:bg-emerald-50" href="'+i.paylink+'" target="_blank" rel="noopener">Bezahlen</a>' : '')+'\
+            <button class="px-3 py-1 border rounded-lg" onclick="changeQty(\''+i.id+'\',-1)">−</button>\
+            <button class="px-3 py-1 border rounded-lg" onclick="changeQty(\''+i.id+'\',+1)">+</button>\
+            <button class="px-3 py-1 text-red-600" onclick="removeFromCart(\''+i.id+'\')">Entfernen</button>\
+          </div>\
+        </div>';
+      }).join('') : '<div class="text-gray-500">Der Warenkorb ist leer.</div>';
     }
-
-    window.addToCart = function(id){
-      var p = PRODUCTS.find(function(x){return x.id===id;});
-      var ex = CART.find(function(x){return x.id===id;});
-      if(ex){ ex.qty += 1; } else { CART.push({ id:p.id, title:p.title, price:p.price, qty:1, paylink:p.paylink }); }
-      persistCart();
-    };
-    window.removeFromCart = function(id){
-      CART = CART.filter(function(x){return x.id!==id;}); persistCart();
-    };
-    window.changeQty = function(id, delta){
-      var item = CART.find(function(x){return x.id===id;}); if(!item) return;
-      item.qty += delta; if(item.qty<=0) window.removeFromCart(id); else persistCart();
-    };
-
-    function persistCart(){ storage.setItem('sanyas_cart', JSON.stringify(CART)); updateCartUI(); }
-    function updateCartUI(){
-      var count = CART.reduce(function(a,b){return a+b.qty;},0);
-      if(cartCount) cartCount.textContent = count;
-      if(cartCountMobile) cartCountMobile.textContent = count;
-      if(cartItemsEl){
-        cartItemsEl.innerHTML = CART.length ? CART.map(function(i){
-          return '<div class="flex items-start justify-between border rounded-xl p-3">\
-            <div>\
-              <div class="font-semibold">'+i.title+'</div>\
-              <div class="text-sm text-gray-500">'+fmt(i.price)+' × '+i.qty+'</div>\
-            </div>\
-            <div class="flex items-center gap-2">\
-              <button class="px-3 py-1 border rounded-lg" onclick="changeQty(\''+i.id+'\',-1)">−</button>\
-              <button class="px-3 py-1 border rounded-lg" onclick="changeQty(\''+i.id+'\',+1)">+</button>\
-              <button class="px-3 py-1 text-red-600" onclick="removeFromCart(\''+i.id+'\')">Entfernen</button>\
-            </div>\
-          </div>';
-        }).join('') : '<div class="text-gray-500">Der Warenkorb ist leer.</div>';
-      }
-      if(cartSubtotalEl){
-        var subtotal = CART.reduce(function(a,b){return a + b.price*b.qty;},0);
-        cartSubtotalEl.textContent = fmt(subtotal);
-      }
+    if(cartSubtotalEl){
+      var subtotal = CART.reduce(function(a,b){return a + b.price*b.qty;},0);
+      cartSubtotalEl.textContent = fmt(subtotal);
     }
+  }
 
-    window.toggleCart = function(open){
-      if(!cartDrawer) return;
-      var isHidden = cartDrawer.classList.contains('hidden');
-      if(open===true && isHidden) cartDrawer.classList.remove('hidden');
-      else if(open===false && !isHidden) cartDrawer.classList.add('hidden');
-      else cartDrawer.classList.toggle('hidden');
-    };
-    window.sendInquiry = function(){
-      if(!CART.length){ alert('Warenkorb ist leer.'); return; }
-      var lines = CART.map(function(i){return '- '+i.title+' x'+i.qty+' — '+fmt(i.price*i.qty);}).join('%0D%0A');
-      var sum = CART.reduce(function(a,b){return a + b.price*b.qty;},0);
-      var subject = encodeURIComponent('Anfrage – Sanyas ECU Dynamics');
-      var body = 'Hallo,%0D%0A%0D%0Ahier meine Anfrage:%0D%0A'+lines+'%0D%0A%0D%0ASumme: '+fmt(sum)+'%0D%0A%0D%0AFahrzeug: [Hersteller/Modell/Baujahr/Motor]%0D%0AVIN: [optional]%0D%0ABeschreibung des Defekts:%0D%0A%0D%0ARechnungsadresse:%0D%0A%0D%0AMit freundlichen Grüßen';
-      window.location.href = 'mailto:info@sanyas.net?subject='+subject+'&body='+body;
-    };
-    window.payNow = function(){
-      var linkItem = CART.find(function(i){return i.paylink && i.paylink.trim()!=='';});
-      var link = linkItem ? linkItem.paylink : null;
-      if(link){ window.open(link, '_blank'); }
-      else { alert('Direktzahlungen sind noch nicht konfiguriert. Nutzen Sie „Anfrage senden“ oder WhatsApp.'); }
-    };
+  // ===== Actions =====
+  function toggleCart(open){
+    if(!cartDrawer) return;
+    var isHidden = cartDrawer.classList.contains('hidden');
+    if(open===true && isHidden) cartDrawer.classList.remove('hidden');
+    else if(open===false && !isHidden) cartDrawer.classList.add('hidden');
+    else cartDrawer.classList.toggle('hidden');
+  }
+  function sendInquiry(){
+    if(!CART.length){ alert('Warenkorb ist leer.'); return; }
+    var lines = CART.map(function(i){return '- '+i.title+' x'+i.qty+' — '+fmt(i.price*i.qty);}).join('%0D%0A');
+    var sum = CART.reduce(function(a,b){return a + b.price*b.qty;}, 0);
+    var subject = encodeURIComponent('Anfrage – Sanyas ECU Dynamics');
+    var body = 'Hallo,%0D%0A%0D%0Ahier meine Anfrage:%0D%0A'+lines+'%0D%0A%0D%0ASumme: '+fmt(sum)+'%0D%0A%0D%0AFahrzeug: [Hersteller/Modell/Baujahr/Motor]%0D%0AVIN: [optional]%0D%0ABeschreibung des Defekts:%0D%0A%0D%0ARechnungsadresse:%0D%0A%0D%0AMit freundlichen Grüßen';
+    window.location.href = 'mailto:info@sanyas.net?subject='+subject+'&body='+body;
+  }
+  function payNow(){
+    var payable = CART.filter(function(i){return i.paylink && i.paylink.indexOf('http')===0;});
+    if(!payable.length){
+      alert('Kein Zahlungslink hinterlegt. Nutze „Anfrage senden“ oder „Direkt zahlen“ am Produkt.');
+      return;
+    }
+    if(payable.length > 1){
+      alert('Mehrere Positionen im Warenkorb. Bezahle jede Position separat über den Button neben dem Artikel.');
+      return;
+    }
+    window.open(payable[0].paylink, '_blank');
+  }
 
-    var cartButton = document.getElementById('cartButton');
-    var cartButtonMobile = document.getElementById('cartButtonMobile');
-    if(cartButton) cartButton.addEventListener('click', function(){ window.toggleCart(true); });
-    if(cartButtonMobile) cartButtonMobile.addEventListener('click', function(){ window.toggleCart(true); });
-    var yearEl = document.getElementById('year');
-    if(yearEl) yearEl.textContent = new Date().getFullYear();
+  // ===== Init =====
+  var cb = document.getElementById('cartButton');
+  var cbm = document.getElementById('cartButtonMobile');
+  if(cb) cb.addEventListener('click', function(){ toggleCart(true); });
+  if(cbm) cbm.addEventListener('click', function(){ toggleCart(true); });
+  var y = document.getElementById('year'); if(y) y.textContent = new Date().getFullYear();
 
-    renderProducts();
-    updateCartUI();
-  });
+  renderProducts();
+  updateCartUI();
   </script>
 </body>
 </html>
